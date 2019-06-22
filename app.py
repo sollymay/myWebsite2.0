@@ -1,5 +1,8 @@
 from flask import Flask, render_template
+
 app = Flask(__name__)
+
+
 
 @app.route('/')
 def index():
@@ -7,7 +10,7 @@ def index():
 
 @app.route('/blog')
 def blog():
-    return 'blog'
+    return render_template('blog.html')
 
 @app.route('/blog/<int:post_id>')
 def show_post(post_id):

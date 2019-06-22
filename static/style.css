@@ -1,0 +1,18 @@
+body{
+    background-color: #3B3F45;
+    color: #ffffff;
+}
+
+a {
+    color: #ffffff;
+}
+
+a:hover {
+    color: black;
+    border-bottom: 10 px solid white !important;
+}
+
+.active {
+    color: aqua;
+    border-bottom: 10 px solid white !important;
+}

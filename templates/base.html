@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    {% block title %} <title> Salomon May - Home </title>{% endblock %}
+    {% endblock %}
+  </head>
+  <body class="text-center">
+
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/blog">Blog</a>
+            <a class="nav-link" href="/resume">Resume</a>
+            <a class="nav-link" href="/contact">Contact</a>
+          </nav>
+        </div>
+    </header>
+      {% block content %}{% endblock %}
+      <footer>
+        &copy; Copyright 2010 by <a href="http://domain.invalid/">you</a>.
+      </footer>
+    </div>
+  </body>
+</html>
