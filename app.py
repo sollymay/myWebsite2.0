@@ -19,11 +19,11 @@ def show_post(post_id):
 
 @app.route('/resume')
 def resume():
-    return 'Resume'
+    return render_template('resume.html')
 
 @app.route('/contact')
 def contact():
-    return 'Contact'
+    return render_template('contact.html')
 
 @app.errorhandler(404)
 def not_found(error):
