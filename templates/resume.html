@@ -1,5 +1,10 @@
 {% extends "base.html" %}
-
+{% block nav %}
+  <a class="nav-link" href="/">Home</a>
+  <a class="nav-link" href="/blog">Blog</a>
+  <a class="active nav-link" href="/resume">Resume</a>
+  <a class="nav-link" href="/contact">Contact</a>
+{% endblock %}
 {% block content %}
 
   <h1 class="important">Resume </h1>

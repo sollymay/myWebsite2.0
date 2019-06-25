@@ -2,6 +2,7 @@
 <html>
   <head>
     {% block head %}
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="https://kit.fontawesome.com/1159e48271.js"></script>
@@ -14,11 +15,14 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link" href="/">Home</a>
+
+          <nav class="nav justify-content-center">
+          {% block nav %}
+            <a class="active nav-link" href="/">Home</a>
             <a class="nav-link" href="/blog">Blog</a>
             <a class="nav-link" href="/resume">Resume</a>
             <a class="nav-link" href="/contact">Contact</a>
+          {% endblock %}
           </nav>
         </div>
       </header>
