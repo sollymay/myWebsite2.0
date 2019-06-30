@@ -10,22 +10,24 @@ body{
     color: #ffffff;
     font-size: 20px;
     font-weight: bolder;
+    padding-bottom: 2px;
 }
 
 .homepage{
     border: 1px solid white;
     border-radius: 3px;
 }
-.active {
-    border-bottom: 4px solid white !important;
-}
-.nav-link:hover {
-    color: black;
+
+.nav-link:hover:not(.active) {
+    color: #b1aeaedf;
     border-bottom: 4px solid #b1aeaedf !important;
 }
 
 .nav-link:active {
     border-bottom: 10 px solid #b1aeaedf !important;
+}
+.active, .active:hover {
+    border-bottom: 4px solid white !important;
 }
 
 .link{
@@ -33,9 +35,12 @@ body{
     text-decoration: none !important;
 }
 
-.link:hover, .link:active {
-    color: black;
+.abs-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
+
 
 .footer{
     border-top: 2px solid white;
@@ -43,8 +48,37 @@ body{
     bottom: 0;
     width: 100%;
     height: 70px;
+    margin-top: -5px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.footer-content{
+    padding-top:5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .main{
-    margin-top: 50px;
+    margin-top: 40px;
+}
+
+.logo {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 30px;
+}
+
+.twitter{
+    font-size: 20px;
+}
+
+.twitter:hover {
+    color: #b1aeaedf;
+}
+
+.navbar-toggler{
+    color: white !important;
+    margin: 10px 0px 10px 5px;
+    font-size: 15px;
 }

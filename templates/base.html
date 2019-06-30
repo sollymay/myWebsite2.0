@@ -2,6 +2,7 @@
 <html>
   <head>
     {% block head %}
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -12,18 +13,37 @@
   </head>
   <body class="text-center">
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <div class="container-fluid">
       <header class="masthead mb-auto">
         <div class="inner">
 
-          <nav class="nav justify-content-center">
-          {% block nav %}
-            <a class="active nav-link" href="/">Home</a>
-            <a class="nav-link" href="/blog">Blog</a>
-            <a class="nav-link" href="/resume">Resume</a>
-            <a class="nav-link" href="/contact">Contact</a>
-          {% endblock %}
-          </nav>
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <div class="d-flex w-50 order-0">
+                    <a class="navbar-brand mr-1 logo" href="/">Salomon May</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse justify-content-center order-2" id="collapsingNavbar">
+                    <ul class="navbar-nav">
+                      {% block nav %}
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="/">Home <span class="sr-only">Home</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/blog">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/resume">Resume</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                        {% endblock %}
+                    </ul>
+                </div>
+                <a href="https://twitter.com/sollymay" class="navbar-text text-truncate mt-1 w-50 text-right order-1 order-md-last twitter"><i class="fab fa-twitter"></i></a>
+            </nav>
         </div>
       </header>
       <div class="container-fluid main">
